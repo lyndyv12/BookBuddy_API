@@ -1,15 +1,10 @@
 const express = require("express");
 const app=express();
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 require("dotenv").config();
 const client = require("./db/client");
-
-console.log(process.env.JWT_SECRET)
-console.log(process.env.JWT_SECRET)
-console.log(process.env.JWT_SECRET)
-console.log(process.env.JWT_SECRET)
 client.connect()
 
 app.use(express.json());
