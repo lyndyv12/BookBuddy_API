@@ -9,6 +9,7 @@ const client = require("./db/client");
 client.connect()
 
 app.use(express.json());
+server.use(cors)
 
 app.use("/api", require("./api"));
 
